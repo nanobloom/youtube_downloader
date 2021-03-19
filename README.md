@@ -14,6 +14,7 @@ What the project does?
 
 How to use it?
 
+Before everything it's likely that you might need libraries installed (pytube, youtube_dl, tkinter), I'll need to solve that later.
 Using the program is as simple as running the code, waiting for tkinter window to pop up, selecting the type of file/s you want to download, pasting the link and clicking download. Download is completed as soon as the pasted link disappears.
 
 
