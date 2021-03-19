@@ -27,7 +27,7 @@ My future plans related to project:
 
 Add anything that might be useful and I've got a couple of ideas:
 - Prettify user interface because visuals are pretty much untouched yet
-- Figure out how to compile it into binaries so that everyone can use it without python interpreter
+- Figure out how to compile it into binaries so that everyone can use it without python interpreter (I believe PyInstaller does that but so far Windows been flagging compiled files as security threats so I need to look up how to deal with that)
 - Add some additional features like downloading a playlist of .mp3's instead of .mp4's or maybe to let user choose specific range of videos/song in a playlist
 - Add a video tutorial on how to use the program (after improving user interface)
 - Try to figure out which of the modules/libraries/functions/anything might be useful so I can learn how to implement these
