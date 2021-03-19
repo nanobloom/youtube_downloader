@@ -58,9 +58,11 @@ def Song():
         for item in os.listdir():
             if item.startswith(song_title):
                 filename, ext = os.path.splitext(item) # files are keeping part of url which we are getting rid of at this point
-                filename = filename.rsplit('-')[:-1]
-                result = '-'.join(filename) + ext
+                filename = filename[:-12]
+                result = filename + ext
                 os.rename(item, result)
+                if 'downloads' not in os.listdir():
+                    os.mkdir('downloads')
                 move(result, f"./downloads/{result}")
     E1.delete(0, END) # Making sure that after downloading the file, our entry widget is cleared so we can insert another link
 
@@ -69,21 +71,25 @@ def Song():
 # Note: Playlist function goes by the name of "Playlist_function" to make sure it doesn't interfere with imported Playlist class
 
 def Video():
+    if 'downloads' not in os.listdir():
+        os.mkdir('downloads')
     video = YouTube(E1.get())
     video_name = f"{video.title}.mp4"
-    video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download(output_path=f"downloads\\{video_name}")
+    video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download(output_path='.\\downloads')
     logger.info(f"User downloaded video:  {video_name}")
     E1.delete(0, END)
 
     
 def Playlist_function():
+    if 'downloads' not in os.listdir():
+        os.mkdir('downloads')
     playlist = Playlist(E1.get())
     playlist_title = playlist.title
     logger.info(f"User initialized downloading playlist:  {playlist_title}")
 
     for video in playlist.videos:
         video_name = f"{video.title}.mp4"
-        video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download(output_path=f"downloads\\{playlist_title}\\")
+        video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download(output_path=f".\\downloads\\{playlist_title}\\")
         logger.info(f"User downloaded video:  {video_name}")
     E1.delete(0, END)
 
