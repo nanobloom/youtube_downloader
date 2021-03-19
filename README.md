@@ -25,11 +25,13 @@ Well for now it's just me and the project is pretty much my learning ground. If 
 
 My future plans related to project:
 
-Adding anything that might be useful and I've got a couple of ideas:
-- Prettifying user interface because visuals are pretty much untouched yet
-- Adding some additional features like downloading a playlist of .mp3's instead of .mp4's or maybe choosing specific range of videos/song in a playlist
-- Trying to figure out which of the modules/libraries/functions/anything might be useful so I can learn how to implement these
-- Also making this readme more readable as it seems too clustered
+Add anything that might be useful and I've got a couple of ideas:
+- Prettify user interface because visuals are pretty much untouched yet
+- Figure out how to compile it into binaries so that everyone can use it without python interpreter
+- Add some additional features like downloading a playlist of .mp3's instead of .mp4's or maybe to let user choose specific range of videos/song in a playlist
+- Add a video tutorial on how to use the program (after improving user interface)
+- Try to figure out which of the modules/libraries/functions/anything might be useful so I can learn how to implement these
+- Also make this readme more readable as it seems too clustered
 
 Suggestions/ideas:
 
