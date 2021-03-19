@@ -1,4 +1,4 @@
-Hey everyone, I'm Filip and this is my first project. Main purpose is to get familiar and learn GitHub and practice programming in general but I think it might be actually useful for the community at the same time so for that reason I decided to share it.
+Hey everyone, I'm Filip, I'm programming in (mostly) Python for a year, on and off and this is my first program that seems like something worth sharing. Main purpose of the project is to get familiar and learn GitHub and practice programming in general but I think it might be actually useful for the community at the same time so for that reason I decided to share it.
 
 
 
