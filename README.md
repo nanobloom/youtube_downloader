@@ -1,5 +1,5 @@
 Hey everyone, I'm Filip, I'm programming in (mostly) Python for a year, on and off and this is my first program that seems like something worth sharing. Main purpose of the project is to get familiar and learn GitHub and practice programming in general but I think it might be actually useful for the community at the same time so for that reason I decided to share it.
-Note: Program is basically at alpha stage. For now it works for me and it might work for you assuming you have libraries installed but it's not guaranteed as I'm still trying to spot bugs and do my best to fix em.
+Note: Program is basically at alpha stage. For now it works for me and it might work for you assuming you are using Windows 10 and have libraries installed but it's not guaranteed as I'm still trying to spot bugs and doing my best to fix em.
 
 
 
@@ -15,7 +15,7 @@ What the project does?
 
 How to use it?
 
-Before everything it's likely that you might need libraries installed (pytube, youtube_dl, tkinter), I'll need to solve that later.
+Before first use, you need to make sure you're meeting the requirements from requirements.txt. Will try to figure out ways around that like getting PyInstaller to work on Windows without flagging my compiled binaries as security threats.
 Using the program is as simple as running the code, waiting for tkinter window to pop up, selecting the type of file/s you want to download, pasting the link and clicking download. Download is completed as soon as the pasted link disappears.
 
 
@@ -29,7 +29,6 @@ My future plans related to project:
 
 Add anything that might be useful and I've got a couple of ideas:
 - Prettify user interface because visuals are pretty much untouched yet
-- Figure out how to compile it into binaries so that everyone can use it without python interpreter (I believe PyInstaller does that but so far Windows been flagging compiled files as security threats so I need to look up how to deal with that)
 - Add some additional features like downloading a playlist of .mp3's instead of .mp4's or maybe to let user choose specific range of videos/song in a playlist
 - Add a video tutorial on how to use the program (after improving user interface)
 - Try to figure out which of the modules/libraries/functions/anything might be useful so I can learn how to implement these
