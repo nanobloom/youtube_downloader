@@ -32,6 +32,7 @@ Add anything that might be useful and I've got a couple of ideas:
 - Add some additional features like downloading a playlist of .mp3's instead of .mp4's or maybe to let user choose specific range of videos/song in a playlist
 - Add a video tutorial on how to use the program (after improving user interface)
 - Try to figure out which of the modules/libraries/functions/anything might be useful so I can learn how to implement these
+- Make sure it works on Linux
 - Also make this readme more readable as it seems too clustered
 
 Suggestions/ideas:
