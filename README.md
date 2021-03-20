@@ -3,7 +3,7 @@ Note: Program is basically at alpha stage. For now it works for me and it might 
 
 
 
-What the project does?
+What the program does?
 
 - It's a downloader that lets user download videos from youtube (as the name suggests ^^) using pytube and youtube_dl libraries
 - Has a simple user interface built using Tkinter
