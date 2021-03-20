@@ -1,0 +1,10 @@
+# Python dependencies required to use
+youtube-dl
+pytube
+tkinter
+
+Python 3 (using 3.9.2 myself)
+
+ffmpeg
+
+also for now it has only been tested on windows

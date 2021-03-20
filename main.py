@@ -16,7 +16,7 @@ logger.setLevel(logging.INFO)
 
 formatter = logging.Formatter('%(asctime)s    %(message)s', datefmt='%H:%M:%S  %d/%m/%Y')
 
-file_handler = logging.FileHandler(log_file)
+file_handler = logging.FileHandler(log_file, encoding='utf-8')
 file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
@@ -52,18 +52,25 @@ parameters = {
 def Song():
     song = E1.get()
     with YoutubeDL(parameters) as yt:
+
         info_dict = yt.extract_info(song)
         song_title = info_dict.get('title', None)
         logger.info(f"User downloaded song:  {song_title}")
+
         for item in os.listdir():
+
             if item.startswith(song_title):
                 filename, ext = os.path.splitext(item) # files are keeping part of url which we are getting rid of at this point
-                filename = filename[:-12]
+                filename = filename[:-12] # need to cut 11 letters away at the end of the filename, hopefully all youtube urls keep containing only 11 letters
                 result = filename + ext
+
                 os.rename(item, result)
+
                 if 'downloads' not in os.listdir():
                     os.mkdir('downloads')
+
                 move(result, f"./downloads/{result}")
+
     E1.delete(0, END) # Making sure that after downloading the file, our entry widget is cleared so we can insert another link
 
 
@@ -73,24 +80,32 @@ def Song():
 def Video():
     if 'downloads' not in os.listdir():
         os.mkdir('downloads')
+
     video = YouTube(E1.get())
     video_name = f"{video.title}.mp4"
+
     video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download(output_path='.\\downloads')
+
     logger.info(f"User downloaded video:  {video_name}")
+
     E1.delete(0, END)
 
     
 def Playlist_function():
     if 'downloads' not in os.listdir():
         os.mkdir('downloads')
+
     playlist = Playlist(E1.get())
     playlist_title = playlist.title
+
     logger.info(f"User initialized downloading playlist:  {playlist_title}")
 
     for video in playlist.videos:
         video_name = f"{video.title}.mp4"
+        
         video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download(output_path=f".\\downloads\\{playlist_title}\\")
         logger.info(f"User downloaded video:  {video_name}")
+
     E1.delete(0, END)
 
 
