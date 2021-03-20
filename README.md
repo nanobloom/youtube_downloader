@@ -33,6 +33,7 @@ Add anything that might be useful and I've got a couple of ideas:
 - Add a video tutorial on how to use the program (after improving user interface)
 - Try to figure out which of the modules/libraries/functions/anything might be useful so I can learn how to implement these
 - Make sure it works on Linux
+- Maybe add some database with SQLite, idk how could it be useful, especially after implementing logging but the main purpose is still to practise things
 - Also make this readme more readable as it seems too clustered
 
 Suggestions/ideas:
