@@ -1,10 +1,4 @@
-# Python dependencies required to use
-youtube-dl
-pytube
-tkinter
-
-Python 3.6 (using 3.9.2 myself)
-
-ffmpeg
-
-also for now it was mostly tested on Windows 10 (worked also on Ubuntu 20.04 installed on VM but hasn't been tested after adding logging and some bug fixing)
+pytube>=10.5.1
+youtube-dl>=2021.1.8
+;python_version>="3.6"
+;ffmpeg
